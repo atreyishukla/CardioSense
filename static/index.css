@@ -1,0 +1,188 @@
+html{
+    font-family: Arial, sans-serif;
+     
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E8EEF2; 
+}   
+
+.headerimg {
+  position: relative; /* anchor for ::after */
+  width: 100%;
+  min-height: 250px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: url("https://ih-cvc.wp02.ihealthspot.com/wp-content/uploads/sites/238/2019/01/cardiac-and-vascular-care-header.jpg")
+              no-repeat center / cover;
+}
+
+.headerimg h1,
+.headerimg h2 {
+  margin: 0.5rem 0;
+  color: #1a2a6c;
+  z-index: 1;  /* stay above fade */
+}
+
+/* Fade overlay into #E8EEF2 background */
+.headerimg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* controls fade length */
+  background: linear-gradient(to bottom, rgba(232, 238, 242, 0), #E8EEF2);
+  z-index: 0;
+}
+
+
+.disclaimer {
+    width: 90%;
+  background: #fdecea;
+  border-left: 6px solid #e74c3c;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e74c3c;
+}
+
+.resources{
+    margin: 1.5rem auto;
+ width: 90%;
+  background: #dfffc2;
+  border-left: 6px solid #296c5f;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+h1 {
+    text-align: center;
+    color: #4357AD;
+    font-weight: bold;
+    font-size: 4rem;
+}
+form {
+    border-radius: 8px;
+    color: #4357AD;
+    align-items: baseline; /* Aligns items in the form */
+    font-weight: bold;
+}   
+
+h2 {
+    color: #4357AD;
+    margin-right: 20px;
+    font-size: 17px;
+    margin-top: 20px;
+}
+a{
+    color: #296c5f;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #333; /* Change color on hover */
+}
+
+
+.center-big-text {
+  font-size: 2rem;  /* increase font size */
+  font-weight: bold;
+  text-align: left; /* center text */
+}
+.resultc{
+    width: 90%;
+    margin: 1.5rem auto;
+background: #b1d5fb;
+  border-left: 6px solid #4357AD;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+/* Form container styled like disclaimer */
+.container {
+    width: 90%;          /* full width */
+  max-width: none;
+  background: #b1d5fb;
+  border-left: 6px solid #4357AD;
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: none; /* keep flat like disclaimer */
+  margin: 2rem auto;
+}
+
+/* Inputs and selects */
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 6px;
+  border: 1px solid #ccd4e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #4357AD;
+  transition: all 0.2s ease-in-out;
+}
+
+input::placeholder {
+  color: #9aa4bd;
+  font-size: 0.9rem;
+}
+
+/* Focus state */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4357AD;
+  box-shadow: 0 0 6px rgba(67, 87, 173, 0.25);
+  background-color: #fff;
+}
+
+/* Custom select arrow */
+select {
+  appearance: none;
+  -webkit-appearance: none; /* Safari */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%234357AD' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px; /* space for arrow */
+}
+
+/* Submit button */
+button {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4357AD, #5a6ee0);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,42 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore pickle files but keep final_model.pkl
+*.pkl
+!final_model.pkl
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/project files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# Flask specific
+instance/
+*.bak
+
+# Model / data artifacts
+*.h5
+*.joblib
+*.npy
+*.npz
+

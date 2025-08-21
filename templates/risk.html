@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      rel="noopener"
+    />
+    
+  </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <body>
+  <div class="headerimg text-center">
+  <h1>CardioSense</h1>
+  <h2 style="font-size: 15px;">Early Detection, Smarter Protection</h2>
+</div>
+    <br>
+    <div class="disclaimer">
+      <p style="font-weight: bold;"> <span>&#9888;</span><strong> Medical Disclaimer:</strong></p>
+      The contents of this website are not intended to diagnose or treat any disease, or offer personal medical advice. You should seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
+    </div>
+    <br>
+    <div class="resultc">
+      <h2 class="center-big-text">Risk Level: <span id="riskText"> {{risk}}%</span></h2>
+      <h2 class="center-big-text" >Risk Category: <span id="categoryText"> {{category}}</span></h2>
+    </div>
+    <br>
+    <div class="resources">
+     <p style="color: #296c5f; font-size: 25px; "><strong> Here are some resources that can help you and your loved ones:</strong></p>
+      <p style="color: #296c5f; font-size: 20px; "><strong>What are Cardiovascular Diseases?</strong></p>
+      <p style="color: #22181C; font-size: 20px; "> Cardiovascular disease is a group of diseases affecting your heart and blood vessels. These diseases can affect one or many parts of your heart and/or blood vessels. A person may be symptomatic (physically experiencing the disease) or asymptomatic (not feeling anything at all).</p>
+      <br>
+      <br>
+      <p style="color: #296c5f; font-size: 20px; "><strong>What conditions are cardiovascular diseases?</strong></p>
+      <p style="color: #22181C; font-size: 20px; "> 
+       There are many different types of cardiovascular diseases, including but not limited to:
+        
+       <ul style="color: #22181C; font-size: 20px; ">
+       <li>
+            Coronary artery disease (CAD)
+          </li>
+          <li>
+            Heart attack
+          </li>
+          <li>
+            Heart failure
+          </li>
+          <li>
+            Arrhythmias (irregular heartbeats)
+          </li>
+          <li>
+            Stroke
+          </li>
+          <li>
+            Peripheral artery disease (PAD)
+          </li>
+          <li>
+            Aortic aneurysm
+          </li>
+          <li>
+            Congenital heart defects
+          </li>
+          </ul>
+          </p>
+      <br>
+      <br>
+      <p style="color: #296c5f; font-size: 20px; "><strong>What are cardiovascular disease risk factors?</strong></p>
+      <p style="color: #22181C; font-size: 20px; "> 
+       You may be more likely to develop cardiovascular disease if you have risk factors such as:
+        
+       <ul style="color: #22181C; font-size: 20px; ">
+       <li>
+            High blood pressure (hypertension)
+          </li>
+          <li>
+            Tobacco use (including vaping)
+          </li>
+          <li>
+            Family history of heart disease
+          </li>
+          <li>
+            Lack of physical activity
+          </li>
+          <li>
+            Overuse of alcohol
+          </li>
+          </ul>
+          <br>
+          <br>
+                <p style="color: #296c5f; font-size: 20px; "> <a href="https://my.clevelandclinic.org/health/diseases/21493-cardiovascular-disease"><strong>Learn More</strong></a></p>
+
+    </div>
+  </body>
+  <script>
+  const risk = "{{ risk }}";        // this gets replaced by your backend
+  const category = "{{ category }}";
+
+  const riskText = document.getElementById("riskText");
+  const categoryText = document.getElementById("categoryText");
+  // Risk percentage color
+  if (risk < 25) {
+    riskText.style.color = "green";
+  } else if (risk < 50) {
+    riskText.style.color = "yellow";
+  } else if (risk < 75) {
+    riskText.style.color = "orange";
+  } else {
+    riskText.style.color = "red";
+  }
+
+  // Category color
+  if (category.toLowerCase() === "low risk") {
+    categoryText.style.color = "green";
+  } else if (category.toLowerCase() === "moderate risk") {
+    categoryText.style.color = "yellow";
+  } else if (category.toLowerCase() === "high risk") {
+    categoryText.style.color = "orange";
+  }
+    else if (category.toLowerCase() === " very high risk") {
+    categoryText.style.color = "red";
+  }
+</script>
+</html>
