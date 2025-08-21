@@ -1,4 +1,5 @@
 Overview
+
 CardioSense is a web application that uses machine learning to estimate the risk of cardiovascular disease based on user-provided health data. It provides an accessible and simple way for individuals to get an early indication of potential risk factors, encouraging proactive health awareness.
 
 Features
@@ -19,7 +20,7 @@ Tech Stack
 
 Installation
  - Clone the repository:
-    git clone https://github.com/atreyishukla/cardiovsense.git
+    git clone https://github.com/atreyishukla/CardioSense.git
     cd cardiovascular-risk-predictor
  - Create and activate a virtual environment:
     python -m venv venv
